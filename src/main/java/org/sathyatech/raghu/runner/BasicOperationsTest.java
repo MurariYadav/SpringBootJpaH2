@@ -9,11 +9,13 @@ import org.sathyatech.raghu.model.Product;
 import org.sathyatech.raghu.repo.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Component;
 
 @Component
+@Order(2)
 public class BasicOperationsTest implements CommandLineRunner{
 	@Autowired
 	private ProductRepository repo;
@@ -51,7 +53,7 @@ public class BasicOperationsTest implements CommandLineRunner{
 		//is record exist
 		System.out.println(repo.existsById(3L)?"Yes data is available":"Seems No Data Found");
 		
-		
+
 		
 		
 	}
